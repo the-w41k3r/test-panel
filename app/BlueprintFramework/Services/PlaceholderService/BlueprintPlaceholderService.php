@@ -6,7 +6,7 @@ class BlueprintPlaceholderService
 {
   public function version(): string
   {
-    return "::v";
+    return "beta-2024-12";
   }
   public function folder(): string
   {
