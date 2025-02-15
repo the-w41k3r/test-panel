@@ -1,0 +1,29 @@
+[1m[2m2025-02-15 14:08:57(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 14:08:57(B[m [34mINFO:(B[m Placing Blueprint command shortcut..
+[1m[2m2025-02-15 14:08:57(B[m [34mINFO:(B[m Linking directories and filesystems..
+
+   INFO  The [public/storage] link has been connected to [storage/app/public].  
+
+[1m[2m2025-02-15 14:08:58(B[m [35mINPUT:(B[m Would you like to put your application into maintenance while Blueprint is installing? (Y/n)
+[1m[2m2025-02-15 14:08:59(B[m [34mINFO:(B[m Putting application into maintenance has been skipped.
+[1m[2m2025-02-15 14:08:59(B[m [34mINFO:(B[m Flushing cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.[1m[2m2025-02-15 14:09:02(B[m [34mINFO:(B[m Running database migrations..
+[1m[2m2025-02-15 14:09:02(B[m [34mINFO:(B[m Seeding Blueprint database records..
+
+   INFO  Seeding database.  
+
+[1m[2m2025-02-15 14:09:02(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 14:09:02(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 14:09:27(B[m [32mSUCCESS:(B[m Blueprint has completed its installation process.
