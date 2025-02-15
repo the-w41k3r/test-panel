@@ -7,6 +7,8 @@ import {
     faMemory,
     faMicrochip,
     faWifi,
+    faFingerprint,
+    faMap
 } from '@fortawesome/free-solid-svg-icons';
 import { bytesToString, ip, mbToBytes } from '@/lib/formatters';
 import { ServerContext } from '@/state/server';
@@ -16,6 +18,9 @@ import StatBlock from '@/components/server/console/StatBlock';
 import useWebsocketEvent from '@/plugins/useWebsocketEvent';
 import classNames from 'classnames';
 import { capitalize } from '@/lib/strings';
+
+import BeforeInformation  from '@/blueprint/components/Server/Terminal/BeforeInformation';
+import AfterInformation  from '@/blueprint/components/Server/Terminal/AfterInformation';
 
 type Stats = Record<'memory' | 'cpu' | 'disk' | 'uptime' | 'rx' | 'tx', number>;
 
@@ -46,15 +51,19 @@ const ServerDetailsBlock = ({ className }: { className?: string }) => {
     const connected = ServerContext.useStoreState((state) => state.socket.connected);
     const instance = ServerContext.useStoreState((state) => state.socket.instance);
     const limits = ServerContext.useStoreState((state) => state.server.data!.limits);
+    const node = ServerContext.useStoreState((state) => state.server.data!.node);
+    const id = ServerContext.useStoreState((state) => state.server.data!.id);
+    const uuid = ServerContext.useStoreState((state) => state.server.data!.uuid);
 
     const textLimits = useMemo(
         () => ({
-            cpu: limits?.cpu ? `${limits.cpu}%` : null,
+            cpu: limits?.cpu ? `${Math.ceil(limits.cpu / 100) * 100}%` : null,
             memory: limits?.memory ? bytesToString(mbToBytes(limits.memory)) : null,
             disk: limits?.disk ? bytesToString(mbToBytes(limits.disk)) : null,
         }),
         [limits]
     );
+
 
     const allocation = ServerContext.useStoreState((state) => {
         const match = state.server.data!.allocations.find((allocation) => allocation.isDefault);
@@ -90,6 +99,7 @@ const ServerDetailsBlock = ({ className }: { className?: string }) => {
 
     return (
         <div className={classNames('grid grid-cols-6 gap-2 md:gap-4', className)}>
+            <BeforeInformation />
             <StatBlock icon={faWifi} title={'Address'} copyOnClick={allocation}>
                 {allocation}
             </StatBlock>
@@ -127,12 +137,13 @@ const ServerDetailsBlock = ({ className }: { className?: string }) => {
             <StatBlock icon={faHdd} title={'Disk'} color={getBackgroundColor(stats.disk / 1024, limits.disk * 1024)}>
                 <Limit limit={textLimits.disk}>{bytesToString(stats.disk)}</Limit>
             </StatBlock>
-            <StatBlock icon={faCloudDownloadAlt} title={'Network (Inbound)'}>
-                {status === 'offline' ? <span className={'text-gray-400'}>Offline</span> : bytesToString(stats.rx)}
+            <StatBlock icon={faFingerprint} title={'Server ID'} copyOnClick={uuid}>
+                {id}
             </StatBlock>
-            <StatBlock icon={faCloudUploadAlt} title={'Network (Outbound)'}>
-                {status === 'offline' ? <span className={'text-gray-400'}>Offline</span> : bytesToString(stats.tx)}
+            <StatBlock icon={faMap} title={'Server Node'} copyOnClick={node}>
+                {node}
             </StatBlock>
+            <AfterInformation />
         </div>
     );
 };
