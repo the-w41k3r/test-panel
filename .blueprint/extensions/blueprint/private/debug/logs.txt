@@ -27,3 +27,71 @@ Flushed Blueprint stylesheet and scripts cache.[1m[2m2025-02-15 14:09:02(B[m
 [1m[2m2025-02-15 14:09:02(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
 [1m[2m2025-02-15 14:09:02(B[m [34mINFO:(B[m Rebuilding panel assets..
 [1m[2m2025-02-15 14:09:27(B[m [32mSUCCESS:(B[m Blueprint has completed its installation process.
+[1m[2m2025-02-15 14:16:35(B[m [31mFATAL:(B[m Installation process has already been finished before, consider using the 'blueprint' command.
+[1m[2m2025-02-15 14:18:33(B[m [33mWARNING:(B[m This is an advanced feature, only proceed if you know what you are doing.
+[1m[2m2025-02-15 14:18:33(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 14:18:33(B[m [34mINFO:(B[m Placing Blueprint command shortcut..
+[1m[2m2025-02-15 14:18:33(B[m [34mINFO:(B[m Linking directories and filesystems..
+ln: failed to create symbolic link '/var/www/pterodactyl/public/extensions/blueprint': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/public/assets/extensions/blueprint': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/lib': File exists
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 14:18:33(B[m [35mINPUT:(B[m Would you like to put your application into maintenance while Blueprint is installing? (Y/n)
+[1m[2m2025-02-15 14:18:37(B[m [34mINFO:(B[m Putting application into maintenance has been skipped.
+[1m[2m2025-02-15 14:18:37(B[m [34mINFO:(B[m Flushing cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.[1m[2m2025-02-15 14:18:39(B[m [34mINFO:(B[m Running database migrations..
+[1m[2m2025-02-15 14:18:40(B[m [34mINFO:(B[m Seeding Blueprint database records..
+
+   INFO  Seeding database.  
+
+[1m[2m2025-02-15 14:18:40(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 14:18:40(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 14:18:56(B[m [32mSUCCESS:(B[m Blueprint has completed its installation process.
+[1m[2m2025-02-15 14:30:17(B[m [31mFATAL:(B[m Installation process has already been finished before, consider using the 'blueprint' command.
+[1m[2m2025-02-15 14:30:27(B[m [33mWARNING:(B[m This is an advanced feature, only proceed if you know what you are doing.
+[1m[2m2025-02-15 14:30:27(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 14:30:28(B[m [34mINFO:(B[m Placing Blueprint command shortcut..
+[1m[2m2025-02-15 14:30:28(B[m [34mINFO:(B[m Linking directories and filesystems..
+ln: failed to create symbolic link '/var/www/pterodactyl/public/extensions/blueprint': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/public/assets/extensions/blueprint': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/lib': File exists
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 14:30:28(B[m [35mINPUT:(B[m Would you like to put your application into maintenance while Blueprint is installing? (Y/n)
+[1m[2m2025-02-15 14:30:29(B[m [34mINFO:(B[m Putting application into maintenance has been skipped.
+[1m[2m2025-02-15 14:30:29(B[m [34mINFO:(B[m Flushing cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.[1m[2m2025-02-15 14:30:32(B[m [34mINFO:(B[m Running database migrations..
+[1m[2m2025-02-15 14:30:32(B[m [34mINFO:(B[m Seeding Blueprint database records..
+
+   INFO  Seeding database.  
+
+[1m[2m2025-02-15 14:30:32(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 14:30:32(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 14:30:52(B[m [32mSUCCESS:(B[m Blueprint has completed its installation process.
