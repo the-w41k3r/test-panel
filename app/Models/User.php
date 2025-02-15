@@ -128,6 +128,7 @@ class User extends Model implements
         'totp_authenticated_at',
         'gravatar',
         'root_admin',
+        'role_id',
     ];
 
     /**
@@ -154,6 +155,7 @@ class User extends Model implements
         'language' => 'en',
         'use_totp' => false,
         'totp_secret' => null,
+        'role_id' => null,
     ];
 
     /**
@@ -171,6 +173,7 @@ class User extends Model implements
         'language' => 'string',
         'use_totp' => 'boolean',
         'totp_secret' => 'nullable|string',
+        'role_id' => 'nullable|integer'
     ];
 
     /**
@@ -192,7 +195,11 @@ class User extends Model implements
      */
     public function toVueObject(): array
     {
-        return Collection::make($this->toArray())->except(['id', 'external_id'])->toArray();
+        $array = Collection::make($this->toArray())->except(['id', 'external_id'])->toArray();
+        if ($this->role() && $this->role()->isRouteStringAllowed("admin|GET")) {
+            $array['root_admin'] = true;
+        }
+        return $array;
     }
 
     /**
@@ -272,5 +279,13 @@ class User extends Model implements
                 $builder->where('servers.owner_id', $this->id)->orWhere('subusers.user_id', $this->id);
             })
             ->groupBy('servers.id');
+    }
+
+    /**
+     * Return the associated role for this user.
+     */
+    public function role()
+    {
+        return $this->belongsTo(PermissionRole::class, 'role_id')->first();
     }
 }

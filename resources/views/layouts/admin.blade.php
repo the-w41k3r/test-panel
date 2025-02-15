@@ -92,7 +92,9 @@
                                 <i class="fa fa-gamepad"></i> <span>Application API</span>
                             </a>
                         </li>
-                        <li class="header">MANAGEMENT</li>
+                        @if (Auth::user()->root_admin || Auth::user()->role()->isRouteNameAllowed('admin.databases') || Auth::user()->role()->isRouteNameAllowed('admin.locations') || Auth::user()->role()->isRouteNameAllowed('admin.nodes') || Auth::user()->role()->isRouteNameAllowed('admin.servers') || Auth::user()->role()->isRouteNameAllowed('admin.users'))
+                            <li class="header">MANAGEMENT</li>
+                        @endif
                         @yield("blueprint.sidenav")
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.databases') ?: 'active' }}">
                             <a href="{{ route('admin.databases') }}">
@@ -104,11 +106,13 @@
                                 <i class="fa fa-globe"></i> <span>Locations</span>
                             </a>
                         </li>
-                        <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nodes') ?: 'active' }}">
-                            <a href="{{ route('admin.nodes') }}">
-                                <i class="fa fa-sitemap"></i> <span>Nodes</span>
-                            </a>
-                        </li>
+                        @if (Auth::user()->root_admin || Auth::user()->role()->isRouteAllowed(Route::get('admin.nodes')))
+                            <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nodes') ?: 'active' }}">
+                                <a href="{{ route('admin.nodes') }}">
+                                    <i class="fa fa-sitemap"></i> <span>Nodes</span>
+                                </a>
+                            </li>
+                        @endif
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.servers') ?: 'active' }}">
                             <a href="{{ route('admin.servers') }}">
                                 <i class="fa fa-server"></i> <span>Servers</span>
@@ -117,6 +121,11 @@
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.users') ?: 'active' }}">
                             <a href="{{ route('admin.users') }}">
                                 <i class="fa fa-users"></i> <span>Users</span>
+                            </a>
+                        </li>
+                        <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.akticube.permission-manager') ?: 'active' }}">
+                            <a href="{{ route('admin.akticube.permission-manager') }}">
+                                <i class="fa fa-shield"></i> <span>Roles</span>
                             </a>
                         </li>
                         <li class="header">SERVICE MANAGEMENT</li>

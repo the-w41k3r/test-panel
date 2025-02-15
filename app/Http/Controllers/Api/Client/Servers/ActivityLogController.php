@@ -41,6 +41,7 @@ class ActivityLogController extends ClientApiController
                     ->where(function (Builder $builder) use ($subusers) {
                         $builder->whereNull('users.id')
                             ->orWhere('users.root_admin', 0)
+                            ->whereNull('users.role_id')
                             ->orWhereIn('users.id', $subusers);
                     });
             })
