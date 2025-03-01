@@ -90,10 +90,34 @@ export default () => {
         <PageContentBlock>
             <FlashMessageRender byKey={'files:view'} css={tw`mb-4`} />
             <ErrorBoundary>
-                <div css={tw`mb-4`}>
+                <div css={tw`flex items-center justify-between mb-4`}>
+                    {/* Breadcrumbs on the left */}
                     <FileManagerBreadcrumbs withinFileEditor isNewFile={action !== 'edit'} />
+
+                    {/* Buttons and Select on the right */}
+                    <div css={tw`flex items-center gap-2`}>
+                        <div css={tw`rounded bg-neutral-900`}>
+                            <Select value={mode} onChange={(e) => setMode(e.currentTarget.value)}>
+                                {modes.map((mode) => (
+                                    <option key={`${mode.name}_${mode.mime}`} value={mode.mime}>
+                                        {mode.name}
+                                    </option>
+                                ))}
+                            </Select>
+                        </div>
+                        {action === 'edit' ? (
+                            <Can action={'file.update'}>
+                                <Button onClick={() => save()}>Save Content</Button>
+                            </Can>
+                        ) : (
+                            <Can action={'file.create'}>
+                                <Button onClick={() => setModalVisible(true)}>Create File</Button>
+                            </Can>
+                        )}
+                    </div>
                 </div>
             </ErrorBoundary>
+
             <BeforeEdit />
             {hash.replace(/^#/, '').endsWith('.pteroignore') && (
                 <div css={tw`mb-4 p-4 border-l-4 bg-neutral-900 rounded border-cyan-400`}>
@@ -132,30 +156,6 @@ export default () => {
                         }
                     }}
                 />
-            </div>
-            <div css={tw`flex justify-end mt-4`}>
-                <div css={tw`flex-1 sm:flex-none rounded bg-neutral-900 mr-4`}>
-                    <Select value={mode} onChange={(e) => setMode(e.currentTarget.value)}>
-                        {modes.map((mode) => (
-                            <option key={`${mode.name}_${mode.mime}`} value={mode.mime}>
-                                {mode.name}
-                            </option>
-                        ))}
-                    </Select>
-                </div>
-                {action === 'edit' ? (
-                    <Can action={'file.update'}>
-                        <Button css={tw`flex-1 sm:flex-none`} onClick={() => save()}>
-                            Save Content
-                        </Button>
-                    </Can>
-                ) : (
-                    <Can action={'file.create'}>
-                        <Button css={tw`flex-1 sm:flex-none`} onClick={() => setModalVisible(true)}>
-                            Create File
-                        </Button>
-                    </Can>
-                )}
             </div>
             <AfterEdit />
         </PageContentBlock>

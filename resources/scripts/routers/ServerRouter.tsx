@@ -53,37 +53,47 @@ export default () => {
 
     return (
         <React.Fragment key={'server-router'}>
+            {/* Top Navigation Bar */}
             <NavigationBar />
-            {!uuid || !id ? (
-                error ? (
-                    <ServerError message={error} />
-                ) : (
-                    <Spinner size={'large'} centered />
-                )
-            ) : (
-                <>
-                    <CSSTransition timeout={150} classNames={'fade'} appear in>
-                        <SubNavigation id={'SubNavigation'}>
-                            <BeforeSubNavigation />
-                            <div>
-                                <NavigationLinks />
-                                <AdditionalServerItems />
-                                {rootAdmin && (
-                                    // eslint-disable-next-line react/jsx-no-target-blank
-                                    <a href={`/admin/servers/view/${serverId}`} target={'_blank'}>
-                                        <FontAwesomeIcon icon={faExternalLinkAlt} />
-                                    </a>
-                                )}
-                            </div>
-                            <AfterSubNavigation />
-                        </SubNavigation>
-                    </CSSTransition>
-                    <InstallListener />
-                    <TransferListener />
-                    <WebsocketHandler />
-                    <NavigationRouter />
-                </>
-            )}
+
+            {/* Main Layout: Sidebar + Content */}
+            <div className="flex h-[calc(100vh-3.5rem)]">
+                {/* Sidebar */}
+                <CSSTransition timeout={150} classNames={'fade'} appear in>
+                    <SubNavigation id={'SubNavigation'}>
+                        <BeforeSubNavigation />
+                        <div className="flex flex-col space-y-2">
+                            <NavigationLinks />
+                            <AdditionalServerItems />
+                            {rootAdmin && (
+                                <a href={`/admin/servers/view/${serverId}`} target={'_blank'}>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} />
+                                </a>
+                            )}
+                        </div>
+                        <AfterSubNavigation />
+                    </SubNavigation>
+                </CSSTransition>
+
+                {/* Main Content */}
+                <div className="flex-1 p-6 overflow-auto">
+                    {!uuid || !id ? (
+                        error ? (
+                            <ServerError message={error} />
+                        ) : (
+                            <Spinner size={'large'} centered />
+                        )
+                    ) : (
+                        <>
+                            <InstallListener />
+                            <TransferListener />
+                            <WebsocketHandler />
+                            <NavigationRouter />
+                        </>
+                    )}
+                </div>
+            </div>
         </React.Fragment>
     );
+
 };

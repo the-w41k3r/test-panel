@@ -83,7 +83,7 @@ const TaskDetailsModal = ({ schedule, task }: Props) => {
         if (backupLimit === 0 && values.action === 'backup') {
             setSubmitting(false);
             addError({
-                message: "A backup task cannot be created when the server's backup limit is set to 0.",
+                message: "Manual Backups are not enabled. For backups, please contact support!",
                 key: 'schedule:task',
             });
         } else {
@@ -128,7 +128,6 @@ const TaskDetailsModal = ({ schedule, task }: Props) => {
                                 <FormikField as={Select} name={'action'}>
                                     <option value={'command'}>Send command</option>
                                     <option value={'power'}>Send power action</option>
-                                    <option value={'backup'}>Create backup</option>
                                 </FormikField>
                             </FormikFieldWrapper>
                         </div>

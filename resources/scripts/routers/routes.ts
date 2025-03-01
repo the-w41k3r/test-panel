@@ -110,16 +110,16 @@ export default {
             name: 'Users',
             component: UsersContainer,
         },
-        {
-            path: '/backups',
-            permission: 'backup.*',
-            name: 'Backups',
-            component: BackupContainer,
-        },
+        // {
+        //     path: '/backups',
+        //     permission: 'backup.*',
+        //     name: 'Backups',
+        //     component: BackupContainer,
+        // },
         {
             path: '/network',
             permission: 'allocation.*',
-            name: 'Network',
+            name: 'Ports',
             component: NetworkContainer,
         },
         {
@@ -134,11 +134,11 @@ export default {
             name: 'Settings',
             component: SettingsContainer,
         },
-        {
-            path: '/activity',
-            permission: 'activity.*',
-            name: 'Activity',
-            component: ServerActivityLogContainer,
-        },
+        // {
+        //     path: '/activity',
+        //     permission: 'activity.*',
+        //     name: 'Activity',
+        //     component: ServerActivityLogContainer,
+        // },
     ],
 } as Routes;

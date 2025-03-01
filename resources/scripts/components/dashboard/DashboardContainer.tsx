@@ -40,9 +40,6 @@ export default () => {
     }, [servers?.pagination.currentPage]);
 
     useEffect(() => {
-        // Don't use react-router to handle changing this part of the URL, otherwise it
-        // triggers a needless re-render. We just want to track this in the URL incase the
-        // user refreshes the page.
         window.history.replaceState(null, document.title, `/${page <= 1 ? '' : `?page=${page}`}`);
     }, [page]);
 
@@ -72,9 +69,11 @@ export default () => {
                 <Pagination data={servers} onPageSelect={setPage}>
                     {({ items }) =>
                         items.length > 0 ? (
-                            items.map((server, index) => (
-                                <ServerRow key={server.uuid} server={server} css={index > 0 ? tw`mt-2` : undefined} />
-                            ))
+                            <div css={tw`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4`}> 
+                                {items.map((server) => (
+                                    <ServerRow key={server.uuid} server={server} />
+                                ))}
+                            </div>
                         ) : (
                             <p css={tw`text-center text-sm text-neutral-400`}>
                                 {showOnlyAdmin

@@ -30,3 +30,499 @@ Flushed Blueprint stylesheet and scripts cache.[1m[2m2025-02-15 14:47:00(B[m
 [1m[2m2025-02-15 14:47:00(B[m [34mINFO:(B[m Rebuilding panel assets..
 [1m[2m2025-02-15 14:47:19(B[m [34mINFO:(B[m Validating update..
 [1m[2m2025-02-15 14:47:19(B[m [32mSUCCESS:(B[m Upgrade finished.
+[1m[2m2025-02-15 19:30:36(B[m [31mFATAL:(B[m 'install' is not a valid command or argument. Use argument '-help' for a list of commands.
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m [34;mInstalling minecraftpluginmanager...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 19:30:42(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 19:30:42(B[m [33mWARNING:(B[m Extension flag 'hasInstallScript' is deprecated.
+[1m[2m2025-02-15 19:30:42(B[m [33mWARNING:(B[m Extension flag 'hasRemovalScript' is deprecated.
+[1m[2m2025-02-15 19:30:42(B[m [33mWARNING:(B[m Extension flag 'developerForceMigrate' is deprecated.
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 19:30:42(B[m [33mWARNING:(B[m Minecraftpluginmanager is built for version beta-A428-2, but your version is beta-2024-12.
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning database migration files..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning and linking app directory..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning and linking router files..
+rm: cannot remove '/var/www/pterodactyl/routes/blueprint/client/minecraftpluginmanager.php': No such file or directory
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning and linking components directory..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Plugins
+PATH: /minecraft-plugins
+TYPE: server
+COMP: MinecraftPluginContainer
+IDEN: MinecraftpluginmanagerYsnmrkkori
+PERM: 
+ADMI: 
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Linking and writing assets directory..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 19:30:42(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/minecraftpluginmanager/private': File exists
+[1m[2m2025-02-15 19:30:43(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 19:30:43(B[m [33mWARNING:(B[m Extension uses a custom installation script, proceed with caution.
+[1m[2m2025-02-15 19:30:43(B[m [34mINFO:(B[m Adding 'minecraftpluginmanager' to active extensions list..
+[1m[2m2025-02-15 19:30:43(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 19:30:43(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 19:30:43(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 19:31:10(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 19:31:10(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 19:31:12(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 19:31:12(B[m [34mINFO:(B[m Running database migrations..
+[1m[2m2025-02-15 19:31:12(B[m [32mSUCCESS:(B[m minecraftpluginmanager has been installed.
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m [34;mInstalling mcmods...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 19:32:20(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 19:32:20(B[m [33mWARNING:(B[m Mcmods is built for version beta-2024-08, but your version is beta-2024-12.
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cloning and linking app directory..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cloning and linking router files..
+rm: cannot remove '/var/www/pterodactyl/routes/blueprint/client/mcmods.php': No such file or directory
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cloning and linking components directory..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Mods Installer
+PATH: /mcmods
+TYPE: server
+COMP: ModsManagerContainer
+IDEN: McmodsVuwsofskws
+PERM: 
+ADMI: 
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Linking and writing assets directory..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/mcmods/private': File exists
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Adding 'mcmods' to active extensions list..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 19:32:20(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 19:32:46(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 19:32:46(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 19:32:47(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 19:32:48(B[m [32mSUCCESS:(B[m mcmods has been installed.
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m [34;mInstalling modpackinstaller...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 19:32:54(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 19:32:54(B[m [33mWARNING:(B[m Extension flag 'hasInstallScript' is deprecated.
+[1m[2m2025-02-15 19:32:54(B[m [33mWARNING:(B[m Extension flag 'hasRemovalScript' is deprecated.
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 19:32:54(B[m [33mWARNING:(B[m Modpackinstaller is built for version beta-2024-08, but your version is beta-2024-12.
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning and linking app directory..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning and linking router files..
+rm: cannot remove '/var/www/pterodactyl/routes/blueprint/client/modpackinstaller.php': No such file or directory
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning and linking console directory..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Creating and linking console commands and schedules..
+SIGN: install
+DESC: Import the egg
+PATH: install.php
+INTE: 
+IDEN: ModpackinstallerCyhsdrfmxl
+SIGN: uninstall
+DESC: Remove the egg
+PATH: uninstall.php
+INTE: 
+IDEN: ModpackinstallerTwhbjipjhh
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning and linking components directory..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Modpacks
+PATH: /modpacks
+TYPE: server
+COMP: ModpackContainer
+IDEN: ModpackinstallerUrkbpxyvkj
+PERM: 
+ADMI: 
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Linking and writing assets directory..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/modpackinstaller/private': File exists
+[1m[2m2025-02-15 19:32:54(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 19:32:54(B[m [33mWARNING:(B[m Extension uses a custom installation script, proceed with caution.
+[1m[2m2025-02-15 19:32:55(B[m [34mINFO:(B[m Adding 'modpackinstaller' to active extensions list..
+[1m[2m2025-02-15 19:32:55(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 19:32:55(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 19:32:55(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 19:33:19(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 19:33:19(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 19:33:21(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 19:33:21(B[m [32mSUCCESS:(B[m modpackinstaller has been installed.
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m [34;mInstalling versionchanger...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 19:33:25(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 19:33:25(B[m [33mWARNING:(B[m Versionchanger is built for version beta-A428-2, but your version is beta-2024-12.
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning and linking app directory..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning and linking router files..
+rm: cannot remove '/var/www/pterodactyl/routes/blueprint/client/versionchanger.php': No such file or directory
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning and linking components directory..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Version Changer
+PATH: /versions
+TYPE: server
+COMP: VersionChangerContainer
+IDEN: VersionchangerWyqkycmnvj
+PERM: 'file.read-content'
+ADMI: 
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning and linking public directory..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Linking and writing assets directory..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/versionchanger/private': File exists
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Adding 'versionchanger' to active extensions list..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 19:33:25(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 19:33:47(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 19:33:48(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 19:33:51(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 19:33:51(B[m [32mSUCCESS:(B[m versionchanger has been installed.
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m [34;mInstalling customserversort...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 19:33:54(B[m [33mWARNING:(B[m Customserversort is built for version alpha-NLM, but your version is beta-2024-12.
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Cloning and linking public directory..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Linking and writing assets directory..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Cloning and linking dashboard wrapper..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/customserversort/private': File exists
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Adding 'customserversort' to active extensions list..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 19:33:54(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 19:33:56(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 19:33:56(B[m [32mSUCCESS:(B[m customserversort has been installed.
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m [34;mInstalling pullfiles...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 19:34:01(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 19:34:01(B[m [33mWARNING:(B[m Pullfiles is built for version beta-A428-2, but your version is beta-2024-12.
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m Cloning and linking app directory..
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m Cloning and linking router files..
+rm: cannot remove '/var/www/pterodactyl/routes/blueprint/client/pullfiles.php': No such file or directory
+[1m[2m2025-02-15 19:34:01(B[m [34mINFO:(B[m Cloning and linking components directory..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Cloning and linking public directory..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Linking and writing assets directory..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/pullfiles/private': File exists
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Adding 'pullfiles' to active extensions list..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 19:34:02(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 19:34:28(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 19:34:28(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 19:34:29(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 19:34:29(B[m [32mSUCCESS:(B[m pullfiles has been installed.
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m [34;mInstalling modpackinstaller...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 20:11:41(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Switching to update process as extension has already been installed.
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 20:11:41(B[m [33mWARNING:(B[m Extension flag 'hasInstallScript' is deprecated.
+[1m[2m2025-02-15 20:11:41(B[m [33mWARNING:(B[m Extension flag 'hasRemovalScript' is deprecated.
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 20:11:41(B[m [33mWARNING:(B[m Modpackinstaller is built for version beta-2024-08, but your version is beta-2024-12.
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning and linking app directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/app/BlueprintFramework/Extensions/modpackinstaller': File exists
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning and linking router files..
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning and linking console directory..
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Creating and linking console commands and schedules..
+SIGN: install
+DESC: Import the egg
+PATH: install.php
+INTE: 
+IDEN: ModpackinstallerYlirltpfev
+SIGN: uninstall
+DESC: Remove the egg
+PATH: uninstall.php
+INTE: 
+IDEN: ModpackinstallerEtqlfhwmqa
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning and linking components directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/resources/scripts/blueprint/extensions/modpackinstaller': File exists
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Modpacks
+PATH: /modpacks
+TYPE: server
+COMP: ModpackContainer
+IDEN: ModpackinstallerJrkoxifcip
+PERM: 
+ADMI: 
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Linking and writing assets directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/public/assets/extensions/modpackinstaller': File exists
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/storage/extensions/modpackinstaller': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/public/fs/modpackinstaller': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/modpackinstaller/private': File exists
+[1m[2m2025-02-15 20:11:41(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 20:11:41(B[m [33mWARNING:(B[m Extension uses a custom installation script, proceed with caution.
+[1m[2m2025-02-15 20:11:44(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 20:11:44(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 20:11:44(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 20:12:01(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 20:12:01(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 20:12:02(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 20:12:03(B[m [32mSUCCESS:(B[m modpackinstaller has been installed.
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m [34;mInstalling mcmods...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 20:12:20(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Switching to update process as extension has already been installed.
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 20:12:20(B[m [33mWARNING:(B[m Mcmods is built for version beta-2024-08, but your version is beta-2024-12.
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cloning and linking app directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/app/BlueprintFramework/Extensions/mcmods': File exists
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cloning and linking router files..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cloning and linking components directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/resources/scripts/blueprint/extensions/mcmods': File exists
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Mods Installer
+PATH: /mcmods
+TYPE: server
+COMP: ModsManagerContainer
+IDEN: McmodsGfizdddoaq
+PERM: 
+ADMI: 
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Linking and writing assets directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/public/assets/extensions/mcmods': File exists
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/storage/extensions/mcmods': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/public/fs/mcmods': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/mcmods/private': File exists
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 20:12:20(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 20:12:38(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 20:12:38(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 20:12:40(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 20:12:40(B[m [32mSUCCESS:(B[m mcmods has been installed.
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Searching and validating framework dependencies..
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m [34;mInstalling minecraftpluginmanager...[0m [37m(1/1)[0m
+[1m[2m2025-02-15 20:12:56(B[m [33mWARNING:(B[m Config value 'requests_controllers' is deprecated, use 'requests_app' instead.
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Switching to update process as extension has already been installed.
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Reading and assigning extension flags..
+[1m[2m2025-02-15 20:12:56(B[m [33mWARNING:(B[m Extension flag 'hasInstallScript' is deprecated.
+[1m[2m2025-02-15 20:12:56(B[m [33mWARNING:(B[m Extension flag 'hasRemovalScript' is deprecated.
+[1m[2m2025-02-15 20:12:56(B[m [33mWARNING:(B[m Extension flag 'developerForceMigrate' is deprecated.
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Writing extension placeholders..
+[1m[2m2025-02-15 20:12:56(B[m [33mWARNING:(B[m Minecraftpluginmanager is built for version beta-A428-2, but your version is beta-2024-12.
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning database migration files..
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning and linking app directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/app/BlueprintFramework/Extensions/minecraftpluginmanager': File exists
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning and linking router files..
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning and linking components directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/resources/scripts/blueprint/extensions/minecraftpluginmanager': File exists
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Linking navigation routes..
+NAME: Plugins
+PATH: /minecraft-plugins
+TYPE: server
+COMP: MinecraftPluginContainer
+IDEN: MinecraftpluginmanagerTuudlbijau
+PERM: 
+ADMI: 
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning and linking private directory..
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Linking and writing assets directory..
+ln: failed to create symbolic link '/var/www/pterodactyl/public/assets/extensions/minecraftpluginmanager': File exists
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning admin view..
+[1m[2m2025-02-15 20:12:56(B[m [34mINFO:(B[m Cloning admin controller..
+[1m[2m2025-02-15 20:12:57(B[m [34mINFO:(B[m Creating and linking extension filesystem..
+ln: failed to create symbolic link '/var/www/pterodactyl/storage/extensions/minecraftpluginmanager': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/public/fs/minecraftpluginmanager': File exists
+ln: failed to create symbolic link '/var/www/pterodactyl/.blueprint/extensions/minecraftpluginmanager/private': File exists
+[1m[2m2025-02-15 20:12:57(B[m [34mINFO:(B[m Cleaning up build files..
+[1m[2m2025-02-15 20:12:57(B[m [33mWARNING:(B[m Extension uses a custom installation script, proceed with caution.
+[1m[2m2025-02-15 20:12:57(B[m [34mINFO:(B[m Unsetting variables..
+[1m[2m2025-02-15 20:12:57(B[m [34mINFO:(B[m Finalizing transaction..
+[1m[2m2025-02-15 20:12:57(B[m [34mINFO:(B[m Rebuilding panel assets..
+[1m[2m2025-02-15 20:13:16(B[m [34mINFO:(B[m Linking filesystems..
+
+   ERROR  The [public/storage] link already exists.  
+
+[1m[2m2025-02-15 20:13:16(B[m [34mINFO:(B[m Flushing view, config and route cache..
+
+   INFO  Blade templates cached successfully.  
+
+
+   INFO  Configuration cached successfully.  
+
+
+   INFO  Route cache cleared successfully.  
+
+
+   INFO  Application cache cleared successfully.  
+
+Flushed Blueprint stylesheet and scripts cache.
+   INFO  Broadcasting queue restart signal.  
+
+[1m[2m2025-02-15 20:13:18(B[m [34mINFO:(B[m Changing Pterodactyl file ownership to 'www-data:www-data'..
+[1m[2m2025-02-15 20:13:19(B[m [34mINFO:(B[m Running database migrations..
+[1m[2m2025-02-15 20:13:19(B[m [32mSUCCESS:(B[m minecraftpluginmanager has been installed.

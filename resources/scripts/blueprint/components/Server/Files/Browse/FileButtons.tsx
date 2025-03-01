@@ -1,10 +1,10 @@
 import React from 'react';
-/* blueprint/import */
+/* blueprint/import */import PullfilesComponent from '@/blueprint/extensions/pullfiles/PullButton';
 
 export default () => {
   return (
     <>
-      {/* blueprint/react */}
+      {/* blueprint/react */}<PullfilesComponent />
     </>
   );
 };

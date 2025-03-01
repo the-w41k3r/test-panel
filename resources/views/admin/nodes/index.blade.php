@@ -10,6 +10,9 @@
 @endsection
 
 @section('content-header')
+    @php
+        $totalNodes = $nodes->count(); // Count total nodes
+    @endphp
     <h1>Nodes<small>All nodes available on the system.</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">Admin</a></li>
@@ -22,7 +25,7 @@
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Node List</h3>
+                <h3 class="box-title">Total: {{ $totalNodes }} Nodes</h3> <!-- Display total nodes here -->
                 <div class="box-tools search01">
                     <form action="{{ route('admin.nodes') }}" method="GET">
                         <div class="input-group input-group-sm">
@@ -37,28 +40,77 @@
             </div>
             <div class="box-body table-responsive no-padding">
                 <table class="table table-hover">
-                    <tbody>
+                    <!-- <thead>
                         <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Location</th>
-                            <th>Memory</th>
-                            <th>Disk</th>
-                            <th class="text-center">Servers</th>
-                            <th class="text-center">SSL</th>
-                            <th class="text-center">Public</th>
+                            <th style="width: 100px;">Name</th>
+                            <th style="width: 5px;">Status</th>
+                            <th class="text-center" style="width: 300px;">Memory</th>
+                            <th class="text-center" style="width: 300px;">Disk</th>
+                            <th class="text-center" style="width: 100px;">Servers</th>
+                            <th class="text-center" style="width: 200px;">SSL</th>
+                            <th class="text-center" style="width: 200px;">Public</th>
                         </tr>
-                        @foreach ($nodes as $node)
-                            <tr>
-                                <td class="text-center text-muted left-icon" data-action="ping" data-secret="{{ $node->getDecryptedKey() }}" data-location="{{ $node->scheme }}://{{ $node->fqdn }}:{{ $node->daemonListen }}/api/system"><i class="fa fa-fw fa-refresh fa-spin"></i></td>
-                                <td>{!! $node->maintenance_mode ? '<span class="label label-warning"><i class="fa fa-wrench"></i></span> ' : '' !!}<a href="{{ route('admin.nodes.view', $node->id) }}">{{ $node->name }}</a></td>
-                                <td>{{ $node->location->short }}</td>
-                                <td>{{ $node->memory }} MiB</td>
-                                <td>{{ $node->disk }} MiB</td>
-                                <td class="text-center">{{ $node->servers_count }}</td>
-                                <td class="text-center" style="color:{{ ($node->scheme === 'https') ? '#50af51' : '#d9534f' }}"><i class="fa fa-{{ ($node->scheme === 'https') ? 'lock' : 'unlock' }}"></i></td>
-                                <td class="text-center"><i class="fa fa-{{ ($node->public) ? 'eye' : 'eye-slash' }}"></i></td>
+                    </thead> -->
+                    <tbody>
+                        @php
+                            $totalSerial = 1; // Initialize total serial number
+                        @endphp
+                        @foreach ($nodes->groupBy('location.short')->sortKeys() as $location => $locationNodes)
+                            @php
+                                $locationSerial = 1; // Initialize serial number for the location
+                            @endphp
+                            <!-- Table heading for each location -->
+                            <tr style="background-color: #273340;">
+                                <th style="width: 100px; font-weight: bold; color: white; font-size: 1.5rem; padding-left: 10px;">{{ $location }}</th>
+                                <th class="text-center" style="width: 5px;">Status</th>
+                                <th class="text-center" style="width: 300px;">Memory</th>
+                                <th class="text-center" style="width: 300px;">Disk</th>
+                                <th class="text-center" style="width: 100px;">Servers</th>
+                                <th class="text-center" style="width: 200px;">SSL</th>
+                                <th class="text-center" style="width: 200px;">Public</th>
                             </tr>
+                            @foreach ($locationNodes as $node)
+                                <tr>
+                                    <td>
+                                        <span style="color: #999999">{{ $locationSerial++ }}. </span><a href="{{ route('admin.nodes.view', $node->id) }}" style="font-size: 1.5rem;"> {{ $node->name }}</a>
+                                    </td>
+                                    <td class="text-center text-muted left-icon" data-action="ping" data-secret="{{ $node->getDecryptedKey() }}" data-location="{{ $node->scheme }}://{{ $node->fqdn }}:{{ $node->daemonListen }}/api/system">
+                                        <i class="fa fa-fw fa-refresh fa-spin"></i>
+                                    </td>
+                                    {{-- Memory --}}
+                                    <td class="text-center">
+                                        @php
+                                            $memoryRatio = $node->allocated_memory / ($node->memory * (1 + $node->memory_overallocate / 100));
+                                            $memoryClass = $memoryRatio < 0.75 ? 'label-success' : ($memoryRatio < 0.85 ? 'label-warning' : 'label-danger');
+                                        @endphp
+                                        <span class="label {{ $memoryClass }}" style="font-size: 1.5rem;">
+                                            {{ number_format($node->allocated_memory / 1024, 2) }} / 
+                                            {{ number_format(($node->memory * (1 + $node->memory_overallocate / 100)) / 1024, 2) }} GB
+                                        </span>
+                                    </td>
+
+                                    {{-- Disk --}}
+                                    <td class="text-center">
+                                        @php
+                                            $diskRatio = $node->allocated_disk / ($node->disk * (1 + $node->disk_overallocate / 100));
+                                            $diskClass = $diskRatio < 0.75 ? 'label-success' : ($diskRatio < 0.85 ? 'label-warning' : 'label-danger');
+                                        @endphp
+                                        <span class="label {{ $diskClass }}" style="font-size: 1.5rem;">
+                                            {{ number_format($node->allocated_disk / 1024, 2) }} / 
+                                            {{ number_format(($node->disk * (1 + $node->disk_overallocate / 100)) / 1024, 2) }} GB
+                                        </span>
+                                    </td>
+
+                                    <td class="text-center">{{ $node->servers_count }}</td>
+                                    <td class="text-center" style="color:{{ $node->scheme === 'https' ? '#50af51' : '#d9534f' }}">
+                                        <i class="fa fa-{{ $node->scheme === 'https' ? 'lock' : 'unlock' }}"></i>
+                                    </td>
+                                    <td class="text-center">
+                                        <i class="fa fa-{{ $node->public ? 'eye' : 'eye-slash' }}"></i>
+                                    </td>
+
+                                </tr>
+                            @endforeach
                         @endforeach
                     </tbody>
                 </table>

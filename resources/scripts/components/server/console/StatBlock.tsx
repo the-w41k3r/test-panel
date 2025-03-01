@@ -16,7 +16,7 @@ interface StatBlockProps {
 }
 
 export default ({ title, copyOnClick, icon, color, className, children }: StatBlockProps) => {
-    const { fontSize, ref } = useFitText({ minFontSize: 8, maxFontSize: 500 });
+    const { fontSize, ref } = useFitText({ minFontSize: 12, maxFontSize: 500 });
 
     return (
         <CopyOnClick text={copyOnClick}>
