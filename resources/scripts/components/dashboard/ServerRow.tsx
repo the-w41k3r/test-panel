@@ -140,10 +140,48 @@ export default ({ server, className }: { server: Server; className?: string }) =
                                 <Icon icon={faMicrochip} $alarm={alarms.cpu} /> CPU:
                             </p>
                             <div css={tw`relative col-span-5 bg-gray-700 rounded h-4`}>
-                                <div css={tw`bg-green-500 h-4 rounded`} style={{ width: `${stats?.cpuUsagePercent ?? 0}%` }}></div>
-                                <p css={tw`absolute w-full text-right text-xs font-bold top-0 left-0 h-4 flex items-center justify-end pr-2`}>
-                                    {stats?.cpuUsagePercent.toFixed(2) ?? '--'}% / {cpuLimit ?? '--'}
-                                </p>
+                                {(() => {
+                                    const usage = stats?.cpuUsagePercent ?? 0;
+                                    let limitValue = 100; // default fallback
+                                    
+                                    // Parse the cpuLimit if it exists
+                                    if (typeof cpuLimit === 'string') {
+                                        if (cpuLimit.includes('%')) {
+                                            // Handle "500 %" case - extract the number
+                                            limitValue = parseFloat(cpuLimit.replace('%', '').trim());
+                                        } else if (cpuLimit === 'Unlimited') {
+                                            // Handle unlimited case - set a high arbitrary limit for visualization
+                                            limitValue = 1000; // or whatever makes sense for your UI
+                                        }
+                                    } else if (typeof cpuLimit === 'number') {
+                                        limitValue = cpuLimit;
+                                    }
+                                    
+                                    const calculatedWidth = limitValue > 0 ? Math.min(100, (usage / limitValue) * 100) : 0;
+                                    
+                                    console.log('CPU Debug:', {
+                                        usage,
+                                        originalLimit: cpuLimit,
+                                        parsedLimit: limitValue,
+                                        calculatedWidth,
+                                        isValid: !isNaN(calculatedWidth)
+                                    });
+                                    
+                                    return (
+                                        <>
+                                            <div 
+                                                css={tw`bg-green-500 h-4 rounded`} 
+                                                style={{ 
+                                                    width: `${calculatedWidth}%`,
+                                                    maxWidth: '100%'
+                                                }}
+                                            ></div>
+                                            <p css={tw`absolute w-full text-right text-xs font-bold top-0 left-0 h-4 flex items-center justify-end pr-2`}>
+                                                {usage.toFixed(2)}% / {cpuLimit ?? '--'}
+                                            </p>
+                                        </>
+                                    );
+                                })()}
                             </div>
                         </div>
 

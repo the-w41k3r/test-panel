@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import useEventListener from '@/plugins/useEventListener';
 import SearchModal from '@/components/dashboard/search/SearchModal';
 import Tooltip from '@/components/elements/tooltip/Tooltip';
 
-export default () => {
-    const [visible, setVisible] = useState(false);
+interface SearchContainerProps {
+    visible: boolean;
+    onClose: () => void;
+}
 
+export default ({ visible, onClose }: SearchContainerProps) => {
     useEventListener('keydown', (e: KeyboardEvent) => {
-        if (['input', 'textarea'].indexOf(((e.target as HTMLElement).tagName || 'input').toLowerCase()) < 0) {
-            if (!visible && e.metaKey && e.key.toLowerCase() === '/') {
-                setVisible(true);
-            }
-        }
+        if (!visible) return;
+        if (e.key === 'Escape') onClose(); // Close modal on Escape key
     });
 
     return (
         <>
-            {visible && <SearchModal appear visible={visible} onDismissed={() => setVisible(false)} />}
+            {visible && <SearchModal appear visible={visible} onDismissed={onClose} />}
             <Tooltip placement={'bottom'} content={'Search'}>
-                <div className={'navigation-link'} onClick={() => setVisible(true)}>
+                <div className={'navigation-link'} onClick={onClose}>
                     <FontAwesomeIcon icon={faSearch} />
                 </div>
             </Tooltip>

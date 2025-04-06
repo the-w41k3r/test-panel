@@ -26,3 +26,8 @@
         }
     }
 }
+/* Prevent internal scrolling */
+.file_manager_container {
+    overflow: visible !important;
+    height: auto !important;
+}

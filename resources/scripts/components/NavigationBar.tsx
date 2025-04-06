@@ -12,6 +12,7 @@ import http from '@/api/http';
 import SpinnerOverlay from '@/components/elements/SpinnerOverlay';
 import Tooltip from '@/components/elements/tooltip/Tooltip';
 import Avatar from '@/components/Avatar';
+import Logo from '@/assets/images/logo.png';
 
 import BeforeNavigation from '@/blueprint/components/Navigation/NavigationBar/BeforeNavigation';
 import AdditionalItems from '@/blueprint/components/Navigation/NavigationBar/AdditionalItems';
@@ -53,31 +54,31 @@ export default () => {
         <div className={'w-full bg-neutral-900 shadow-md overflow-x-auto'} id={'NavigationBar'}>
             <BeforeNavigation />
             <SpinnerOverlay visible={isLoggingOut} />
-            <div className={'mx-auto w-full flex items-center h-[3.5rem] max-w-[1200px]'}>
+            <div className={'mx-auto w-full flex items-center h-[3.5rem] max-w-[1900px]'}>
                 <div id={'logo'} className={'flex-1'}>
                     <Link
                         to={'/'}
                         className={
-                            'text-2xl font-header px-4 no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'
+                            'text-2xl font-header no-underline text-neutral-200 hover:text-neutral-100 transition-colors duration-150'
                         }
                     >
-                        {name}
+                        <img src={Logo} alt="Logo" className="ml-4 h-1 w-auto hidden" />
                     </Link>
                 </div>
                 <RightNavigation className={'flex h-full items-center justify-center'}>
-                    <SearchContainer />
+                    {/*<SearchContainer />*/}
                     <Tooltip placement={'bottom'} content={'Dashboard'}>
                         <NavLink to={'/'} exact id={'NavigationDashboard'}>
                             <FontAwesomeIcon icon={faLayerGroup} />
                         </NavLink>
                     </Tooltip>
-                    {rootAdmin && (
-                        <Tooltip placement={'bottom'} content={'Admin'}>
-                            <a href={'/admin'} rel={'noreferrer'} id={'NavigationAdmin'}>
-                                <FontAwesomeIcon icon={faCogs} />
-                            </a>
-                        </Tooltip>
-                    )}
+                    {/*{rootAdmin && (*/}
+                    {/*    <Tooltip placement={'bottom'} content={'Admin'}>*/}
+                    {/*        <a href={'/admin'} rel={'noreferrer'} id={'NavigationAdmin'}>*/}
+                    {/*            <FontAwesomeIcon icon={faCogs} />*/}
+                    {/*        </a>*/}
+                    {/*    </Tooltip>*/}
+                    {/*)}*/}
                     <AdditionalItems />
                     <Tooltip placement={'bottom'} content={'Account Settings'}>
                         <NavLink to={'/account'} id={'NavigationAccount'}>
